@@ -1,0 +1,74 @@
+.sliderContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100vw;
+    overflow: hidden;
+}
+.slide{
+    width: 85vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 5vw;
+    column-gap: 1vw;
+    padding: 5vh 0;
+}
+
+.imgWrapper{
+    max-width: 40vw;
+}
+
+.imgWrapper>img{
+    max-width: 30vw;
+}
+
+.slideName{
+    font-size: 50px;
+    line-height: 62px;
+    font-weight: 300;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.slideAbout{
+    font-size: 18px;
+}
+
+.priceTitle{
+    font-size: 12px;
+}
+
+.slideInfo{
+    padding-right: 10vw;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1vh;
+}
+
+.slideActive{
+    width: 100vw;
+}
+
+
+
+.slide-enter {
+    transform: translateY(-50px);
+    z-index: -1;
+  }
+  .slide-enter-active {
+    transform: translateY(0px);
+    transition: all 500ms ease-in;
+    z-index: 0;
+  }
+  .slide-exit {
+    transform: translateY(0px);
+    z-index: 0;
+    opacity: 1;
+  }
+  .slide-exit-active {
+    z-index: -1;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 500ms ease-in;
+  }
