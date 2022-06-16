@@ -37,6 +37,36 @@
     font-size: 12px;
 }
 
+.pricesAll{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.priceNow{
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.priceOld{
+    align-items: center;
+    color: rgba(164, 164, 164, 1);
+    font-size: 22px;
+    font-weight: 500;
+    text-decoration:line-through;
+}
+
+.toCartBtn{
+    background-color: rgba(246, 171, 58, 1);
+    color: black;
+    padding: 1.5vh 2vw;
+    border: none;
+    font-size: 16px;
+}
+
 .slideInfo{
     padding-right: 10vw;
     max-width: 100%;

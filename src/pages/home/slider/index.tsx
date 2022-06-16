@@ -79,8 +79,8 @@ const Slider = ({ classess, slides, setSlides }) => {
                                         <div className={cl.prices}>
                                             <p className={cl.priceTitle}>Цена</p>
                                             <div className={cl.pricesAll}>
-                                                <div className={cl.priceNow}>{sl.price}</div>
-                                                <div className={cl.priceOld}>{sl.oldprice}</div>
+                                                <div className={cl.priceNow}>{sl.price}₽</div>
+                                                <div className={cl.priceOld}>{sl.oldprice}₽</div>
                                             </div>
                                             <button className={cl.toCartBtn}>Добавить в корзину</button>
                                         </div>
