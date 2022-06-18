@@ -86,22 +86,24 @@ const Slider = ({ classess, slides, setSlides }) => {
                                         </div>
                                     </div>
                                 </div>
+                                <div className={cl.navigaton}>
+                                    <button onClick={() => { previos() }}> <MdOutlineKeyboardArrowLeft color='' size={'40'} /> </button>
+                                    {
+                                        slides.map((sl, i) =>
+                                            i == slide
+                                                ? <button key={sl.id}><GoPrimitiveDot color='rgba(246, 171, 58, 0.6)' /></button>
+                                                : <button key={sl.id} onClick={(e) => setSlide(sl.id - 1)}><TbCircleDot color='rgba(246, 171, 58, 0.6)' /></button>
+                                        )
+                                    }
+                                    <button onClick={() => { next() }}> <MdOutlineKeyboardArrowRight color='' size={'40'} /> </button>
+                                </div>
                             </div>
+
                         </div>
                         : <div></div>
                 )}
             </div>
-            <div className="navigation">
-                <button onClick={() => { previos() }}> <MdOutlineKeyboardArrowLeft /> </button>
-                {
-                    slides.map((sl, i) =>
-                        i == slide
-                            ? <button key={sl.id}><GoPrimitiveDot /></button>
-                            : <button key={sl.id} onClick={(e) => setSlide(sl.id - 1)}><TbCircleDot /></button>
-                    )
-                }
-                <button onClick={() => { next() }}> <MdOutlineKeyboardArrowRight /> </button>
-            </div>
+
         </div >
     );
 };

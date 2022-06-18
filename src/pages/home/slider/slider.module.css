@@ -1,16 +1,17 @@
 .sliderContainer{
     display: grid;
     grid-template-columns: 1fr;
-    width: 100vw;
+    width: 99vw;
     overflow: hidden;
 }
 .slide{
-    width: 85vw;
+    /* padding: 0 7.5vw; */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 0 5vw;
+    /* margin: 0 5vw; */
     column-gap: 1vw;
-    padding: 5vh 0;
+    padding: 5vh 7.5vw;
+    background-color: rgba(0, 0, 0, 0.02);
 }
 
 .imgWrapper{
@@ -22,6 +23,7 @@
 }
 
 .slideName{
+    margin-bottom: 4vh;
     font-size: 50px;
     line-height: 62px;
     font-weight: 300;
@@ -42,17 +44,48 @@
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
+    max-width: 13vw;
+}
+
+.navigaton{
+    justify-content: center;
+    justify-self: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.navigaton>button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.navigaton>button>*{
+    transition: .4s;
+    animation: .4s opacitys ease-in;
+}
+
+@keyframes opacitys{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 .priceNow{
     align-items: center;
-    text-align: center;
+    text-align: left;
     font-size: 24px;
     font-weight: 500;
 }
 
 .priceOld{
-    align-items: center;
+    align-items: left;
     color: rgba(164, 164, 164, 1);
     font-size: 22px;
     font-weight: 500;
@@ -67,12 +100,17 @@
     font-size: 16px;
 }
 
+.slideAbouts{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
 .slideInfo{
     padding-right: 10vw;
     max-width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1.8fr;
     row-gap: 1vh;
 }
 
