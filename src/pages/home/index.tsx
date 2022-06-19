@@ -4,6 +4,7 @@ import slideImg from "../../img/slide.png"
 import Why from "./Why";
 import PopProd from "../../components/popProd";
 import Articles from "../../components/Articles/Articles";
+import WeCallYou from "../../components/WeCallYou/WeCallYou";
 const Home = () => {
     let [slides, setSlides] = useState([
         { about: "Геотермальный тепловой SGLA GM-10 S (H)  и горячего водоснабжения... Подходит для установки на деревянную/межкомнатную дверь.", price: "2145 000", oldprice: "370 00", name: 'ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС SILA GM-10 S (H)', img: "../../img/slide.png", id: 1, selected: true },
@@ -67,6 +68,7 @@ const Home = () => {
             <Why />
             <PopProd pops={pops} />
             <Articles />
+            <WeCallYou />
         </div>
 
     );
