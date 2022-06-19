@@ -63,7 +63,7 @@ const Home = () => {
     ])
 
     return (
-        <div>
+        <div className="text-base">
             <Slider classess={''} slides={slides} setSlides={setSlides} />
             <Why />
             <PopProd pops={pops} />
