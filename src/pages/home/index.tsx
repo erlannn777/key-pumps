@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Slider from "./slider";
 import slideImg from "../../img/slide.png";
 import Why from "./Why";
+import PopProd from "../../components/popProd";
+import Articles from "../../components/Articles/Articles";
 const Home = () => {
   let [slides, setSlides] = useState([
     {
@@ -35,10 +37,63 @@ const Home = () => {
       selected: false,
     },
   ]);
+  let [pops, setPops] = useState([
+    {
+      title: "ТЕПЛОВОЙ НАСОС ДЛЯ БАССЕЙНА SILA AM-07 IS (HC)",
+      promotionProc: 21,
+      price: "33000",
+      oldPrice: 37000,
+      img: "",
+      avible: true,
+    },
+    {
+      title: "ТЕПЛОВОЙ НАСОС ДЛЯ БАССЕЙНА SILA AM-07 IS (HC)",
+      promotionProc: 21,
+      price: "33000",
+      oldPrice: 37000,
+      img: "",
+      avible: true,
+    },
+    {
+      title: "ТЕПЛОВОЙ НАСОС ДЛЯ БАССЕЙНА SILA AM-07 IS (HC)",
+      promotionProc: 0,
+      price: "33000",
+      oldPrice: 0,
+      img: "",
+      avible: true,
+    },
+    {
+      title: "ТЕПЛОВОЙ НАСОС ДЛЯ БАССЕЙНА SILA AM-07 IS (HC)",
+      promotionProc: 21,
+      price: "33000",
+      oldPrice: 37000,
+      img: "",
+      avible: false,
+    },
+    {
+      title: "ТЕПЛОВОЙ НАСОС ДЛЯ БАССЕЙНА SILA AM-07 IS (HC)",
+      promotionProc: 21,
+      price: "33000",
+      oldPrice: 37000,
+      img: "",
+      avible: false,
+    },
+    {
+      title: "ТЕПЛОВОЙ НАСОС ДЛЯ БАССЕЙНА SILA AM-07 IS (HC)",
+      promotionProc: 0,
+      price: "33000",
+      oldPrice: 0,
+      img: "",
+      avible: true,
+    },
+  ]);
+
   return (
     <div>
       <Slider classess={""} slides={slides} setSlides={setSlides} />
       <Why />
+      <PopProd pops={pops} />
+      <Articles />
     </div>
   );
 };
