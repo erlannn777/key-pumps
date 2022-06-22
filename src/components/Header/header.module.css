@@ -14,6 +14,7 @@
 .nav{
     background-color: #24272E;
     color: white;
+    padding: 1rem 0;
 }
 
 .headerPromo{
@@ -22,7 +23,7 @@
     display: grid;
     grid-template-columns: 1.4fr 1fr;
     align-items: center;
-    height: 4.5vh;
+    padding: 0.3rem 0;
 }
 
 .headerPromo>span{
@@ -37,9 +38,9 @@
     background-color: rgba(255, 255, 255, 0.83);
     display: grid;
     grid-template-columns: 1fr 9fr;
-    padding: 1vh 0;
     justify-content: center;
     align-items: center;
+    padding: 5px;
 }
 
 
@@ -60,8 +61,6 @@
 }
 
 .loupe{
-    width: 2.5vh;
-    height: 2.5vh;
     justify-content: center;
     display: grid;
     margin: auto;
@@ -69,8 +68,8 @@
 }
 
 .navListLogo{
-    padding: .5vh 0;
-    height: 5vh;
+    /*padding: .5vh 0;*/
+    height: 3rem;
 }
 
 .navList{
@@ -81,11 +80,6 @@
     justify-content: space-between;
     padding: 0 3vw;
 }
-
-.form{
-
-}
-
 .navListItemBtn{
     background-color: rgba(246, 171, 58, 1);
     padding: .4vh 2vh;
@@ -114,7 +108,6 @@
 }
 
 .yellow{
-    width: 2.5vh;
-    height: 2.5vh;
+    width: 5rem
 }
 

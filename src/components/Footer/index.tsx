@@ -5,44 +5,54 @@ import vk from "../../img/vk.png"
 
 const Footer = () => {
     return (
-        <footer className={cl.footer}>
-            <div className={cl.footerUpper}>
-                <div className={cl.footerUpperItem + cl.footerUpperItemLogo}><img src={logo}></img></div>
-                <div className={cl.footerUpperItem}>
-                    <h3 className={cl.footerUpperItemHeader}>Навигация</h3>
-                    <a href="#" className={cl.footerUpperItemItem}>Главная</a>
-                    <a href="#" className={cl.footerUpperItemItem}>Каталог</a>
-                    <a href="#" className={cl.footerUpperItemItem}>Вопрос-ответ</a>
-                    <a href="#" className={cl.footerUpperItemItem}>О нас</a>
+        <div>
+            <footer className="p-4 bg-white sm:p-6 dark:bg-gray-800">
+                <div className="container sm:max-w-full md:flex md:justify-between">
+                    <div className="mb-6 md:mb-0">
+                        <a href="https://flowbite.com/" className="flex items-center">
+                        </a>
+                    </div>
+                    <div className="grid grid-cols-3 gap-8 sm:gap-6 sm:grid-cols-3">
+                        <div>
+                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                            <ul className="text-gray-600 dark:text-gray-400">
+                                <li className="mb-4">
+                                    <a href="https://flowbite.com/" className="hover:underline">Flowbite</a>
+                                </li>
+                                <li>
+                                    <a href="https://tailwindcss.com/" className="hover:underline">Tailwind CSS</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow
+                                us</h2>
+                            <ul className="text-gray-600 dark:text-gray-400">
+                                <li className="mb-4">
+                                    <a href="https://github.com/themesberg/flowbite"
+                                       className="hover:underline ">Github</a>
+                                </li>
+                                <li>
+                                    <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">Discord</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                            <ul className="text-gray-600 dark:text-gray-400">
+                                <li className="mb-4">
+                                    <a href="#" className="hover:underline">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#" className="hover:underline">Terms &amp; Conditions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div className={cl.footerUpperItem}>
-                    <h3 className={cl.footerUpperItemHeader}>Наши контакты</h3>
-                    <p className={cl.footerUpperItemItem}>Телефоны</p>
-                    <a href="#" className={cl.footerUpperItemItem}>+7 (964) 945 41 38</a>
-                    <p className={cl.footerUpperItemItem}>Email</p>
-                    <a href="#" className={cl.footerUpperItemItem}>info@keypumps.ru</a>
-                </div>
-                <div className={cl.footerUpperItem}>
-                    <h3 className={cl.footerUpperItemHeader}>Наш Адрес</h3>
-                    <p className={cl.footerUpperItemItem}>Россия,</p>
-                    <p className={cl.footerUpperItemItem}>г. Сочи, ул. Горького, 87</p>
-                    <p className={cl.footerUpperItemItem}></p>
-                    <p className={cl.footerUpperItemItem}></p>
-                </div>
-                <div className={cl.footerUpperItem}>
-                    <h3 className={cl.footerUpperItemHeader}>Информация</h3>
-                    <a href="#" className={cl.footerUpperItemItem}>Доставка и оплата</a>
-                    <a href="#" className={cl.footerUpperItemItem}>Гарантии</a>
-                    <a href="#" className={cl.footerUpperItemItem}>Возврат товара</a>
-                    <p className={cl.footerUpperItemItem}></p>
-                </div>
-            </div>
-            <div className={cl.itemsOfIcons}>
-                <img className={cl.invert + " " + cl.icon} src={vk} alt="" />
-            </div>
-            <hr className={cl.hr} />
-            <p className={cl.under + " " + cl.textCenter}>ⓒ 2022 KeyPumps All rights reserved.</p>
-        </footer>
+            </footer>
+
+        </div>
     );
 };
 
