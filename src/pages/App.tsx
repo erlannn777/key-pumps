@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 import FAQ from "./faq";
 import Articles from "./articles";
 import Article from "./articles/article/Article";
+import Checkout from "./checkout/checkout";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/articles/:id" element={<Article />} />
+          <Route path='/checkout' element={<Checkout/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../../img/logo.png"
 
 const Header = () => {
+    console.log('jnkj')
     return (
         <div>
             <div className='bg-gray-300 flex justify-around p-1'>
