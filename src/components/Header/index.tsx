@@ -6,7 +6,7 @@ import { FiChevronDown } from "react-icons/fi";
 import { IoSearchOutline } from "react-icons/io5";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FiShoppingCart } from "react-icons/fi";
-import logo from "../../img/logo.png";
+import logo from "../../img/logo.svg";
 import { openCartModal } from "../../store/ui/actions";
 import { useAppDispatch } from "../../store";
 

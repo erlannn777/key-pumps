@@ -1,6 +1,6 @@
 import React from "react";
 import cl from "./footer.module.css";
-import logo from "./assets/logo.svg";
+import logo from "../../img/logo.svg";
 import vk from "../../img/vk.png";
 import { BsTwitter } from "react-icons/bs";
 import { AiFillFacebook } from "react-icons/ai";
@@ -12,7 +12,7 @@ const Footer = () => {
       <footer className="w-full p-4  container flex flex-wrap justify-between">
         <div className="flex flex-col justify-between">
           <img src={logo} alt="" />
-          <div className="flex text-2xl justify-around">
+          <div className="flex text-2xl justify-around text-white ">
             <BsTwitter />
             <AiFillFacebook />
             <BsTwitter />
