@@ -4,6 +4,7 @@ import slideImg from "../../img/slide.png";
 import Why from "./Why";
 import PopProd from "../../components/popProd";
 import Articles from "../../components/Articles/Articles";
+import WeCallYou from "../../components/WeCallYou/WeCallYou";
 const Home = () => {
   let [slides, setSlides] = useState([
     {
@@ -88,14 +89,28 @@ const Home = () => {
     },
   ]);
 
+  // <<<<<<< HEAD
+  //   return (
+  //     <div>
+  //       <Slider classess={""} slides={slides} setSlides={setSlides} />
+  //       <Why />
+  //       <PopProd pops={pops} />
+  //       <Articles />
+  //     </div>
+  //   );
+  // =======
+  // ])
+
   return (
-    <div>
+    <div className="text-base">
       <Slider classess={""} slides={slides} setSlides={setSlides} />
       <Why />
       <PopProd pops={pops} />
       <Articles />
+      <WeCallYou />
     </div>
   );
+  // >>>>>>> 9df42fb77fc7b45bfb2a8c589b768529607b502b
 };
 
 export default Home;
