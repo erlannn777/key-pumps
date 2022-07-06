@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Slider from "./slider";
-import slideImg from "../../img/slide.png";
+// import slideImg from "../../img/slide.png";
 import Why from "./Why";
 import PopProd from "../../components/popProd";
 import Articles from "../../components/Articles/Articles";
