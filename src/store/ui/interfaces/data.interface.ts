@@ -4,6 +4,8 @@ export interface IModal<T = any> {
   open: boolean;
 }
 
-export interface IUIData {}
+export interface IUIData {
+  cartModal: IModal;
+}
 
 export type IUIState = IUIData;

@@ -7,8 +7,11 @@ import { IoSearchOutline } from "react-icons/io5";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FiShoppingCart } from "react-icons/fi";
 import logo from "../../img/logo.png";
+import { openCartModal } from "../../store/ui/actions";
+import { useAppDispatch } from "../../store";
 
 const Header = () => {
+  const dispatch = useAppDispatch();
   return (
     // <<<<<<< HEAD
     <div>
@@ -36,30 +39,30 @@ const Header = () => {
         </div>
         <div className="w-full block flex-grow sm:hidden lg:flex xl:flex xl:justify-between lg:items-center lg:w-auto">
           <div className="text-sm xl:flex">
-            <a
-              href="#"
+            <Link
+              to="/"
               className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-400 mr-4"
             >
               Главная
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="catalog"
               className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-400 mr-4"
             >
               Каталог
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="about-us"
               className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-400 mr-4"
             >
               О нас
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="order"
               className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-400 mr-4"
             >
               Еще
-            </a>
+            </Link>
           </div>
           <div className="relative w-80">
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -83,7 +86,9 @@ const Header = () => {
               placeholder="Поиск"
             />
             <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-              <button className="bg-orange-400 px-2 py-1">найти</button>
+              <button className="bg-orange-400 px-2 py-1 cursor-pointer">
+                найти
+              </button>
             </div>
           </div>
           <div className="w-36" />
@@ -106,7 +111,15 @@ const Header = () => {
           </div>
           <div className="ml-4">
             <svg
-              className="h-8 w-8 text-orange-400"
+              onClick={() => {
+                dispatch(
+                  openCartModal({
+                    data: null,
+                    open: true,
+                  })
+                );
+              }}
+              className="h-8 w-8 text-orange-400 cursor-pointer"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -137,7 +150,15 @@ const Header = () => {
           </div>
           <div className="ml-4">
             <svg
-              className="h-6 w-6 text-orange-400"
+              onClick={() => {
+                dispatch(
+                  openCartModal({
+                    data: null,
+                    open: true,
+                  })
+                );
+              }}
+              className="h-6 w-6 text-orange-400 cursor-pointer"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"

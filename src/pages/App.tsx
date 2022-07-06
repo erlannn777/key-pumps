@@ -12,25 +12,31 @@ import FAQ from "./faq";
 import Articles from "./articles";
 import Article from "./articles/article/Article";
 import Checkout from "./checkout/checkout";
+import CartModal from "../components/CartModal";
+import { Provider } from "react-redux";
+import store from "../store";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/catalog" element={<Catalog />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/order" element={<Order />} />
-        <Route path="/faq" element={<FAQ />} />
-        <Route path="/articles" element={<Articles />} />
-        <Route path="/articles/:id" element={<Article />} />
-          <Route path='/checkout' element={<Checkout/>}/>
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/order" element={<Order />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/articles" element={<Articles />} />
+          <Route path="/articles/:id" element={<Article />} />
+          <Route path="/checkout" element={<Checkout />} />
+        </Routes>
+        <Footer />
+        <CartModal />
+      </BrowserRouter>
+    </Provider>
   );
 }
 
